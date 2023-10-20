@@ -12,10 +12,7 @@ const DocsPage: FC<Props> = (params) => {
   return (
     <div>
       <h1>DOCS!</h1>
-      <ul>
-        <li>{params.params.id[0]}</li>
-        <li>{params.params.id[1]}</li>
-      </ul>
+      {params.params.id ? <h2>{params.params.id}</h2> : null}
     </div>
   )
 }
