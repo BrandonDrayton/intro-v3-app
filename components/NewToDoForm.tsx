@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import { newTodo } from '@/utils/actions'
 
-const NewToDoForm: React.FC = () => {
-  const [state, updateState] = useState<string>('')
-
+const NewTodoForm = () => {
   return (
     <div>
-      <form action="push">
-        <input type="text" />
+      <form action={newTodo}>
+        <input type="text" name="todo" className="border border-black" />
+        <button type="submit">create</button>
       </form>
     </div>
   )
 }
 
-export default NewToDoForm
+export default NewTodoForm
