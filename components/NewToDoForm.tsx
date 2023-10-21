@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const NewToDoForm = () => {
-  return <div>NewToDoForm</div>
+const NewToDoForm: React.FC = () => {
+  const [state, updateState] = useState<string>('')
+
+  return (
+    <div>
+      <form action="push">
+        <input type="text" />
+      </form>
+    </div>
+  )
 }
 
 export default NewToDoForm
